@@ -1,0 +1,42 @@
+import java.util.Scanner;
+
+public class Principal {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		int cod = 0,alcool = 0,gasolina = 0,diesel = 0;
+	
+		System.out.println(" 1.Álcool \n 2.Gasolina \n 3.Diesel \n 4.Fim\n");
+		
+		
+		while(cod != 4) {
+			
+		System.out.println("Qual combustivel foi utilizado no abastecimento");
+		cod = sc.nextInt();
+				
+		switch(cod) {
+		
+		case 1:
+			alcool += 1;
+			break;
+		
+		case 2:
+			gasolina += 1;
+			break;
+		case 3:
+			diesel += 1;
+			break;	
+			
+		default:
+			System.out.println("Combustível não encontrado");
+		}	
+					
+		}
+		
+		System.out.println("Vendas feitas");
+		System.out.println(" Álcool: " + alcool + "\n Gasolina: " + gasolina + "\n Diesel: " + diesel );	
+	}
+
+}
